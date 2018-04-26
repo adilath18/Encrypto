@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SB Admin - Start Bootstrap Template</title>
+  <link rel="import" href="header.html">
+  <link rel="import" href="footer.html">
+  
+  <style type="text/css">
+  	.hcenter {
+  		text-align: center;
+  	}
+  	
+  	.mr10 {
+  		margin-right: 10px;
+  	}
+  </style>
+  
+</head>
+
+<body class="sticky-footer" id="page-top">
+  <!-- Navigation-->
+  <div class="content-wrapper" style="margin-left: 0px">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      
+      <table class="table table-bordered table-striped table-condensed table-hover" id="userTable">
+      	<thead>
+      		<tr>
+      			<th class="hcenter">Name</th>
+      			<th class="hcenter">Actions</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+			      	
+      	</tbody>
+      </table>
+     
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    
+    <!--  Add School Modal  -->
+    <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="schoolModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Send Data</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <input type="hidden" id="sender_id" value=""/>
+          <form id="schoolForm">
+          <div class="form-group">
+            <div class="form-row">
+            <div class="col-md-6">
+              <label for="user">User
+                <select id="userList" class="form-control input-large" required>
+                	<option value="">Choose User</option>
+                </select>
+                </label>
+              </div>
+              <div class="col-md-6">
+                <label for="data">Data
+                <input class="form-control" id="data" name="data" required type="text" aria-describedby="nameHelp" placeholder="Enter Data">
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+          
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" type="button" id="sendData">
+              <span aria-hidden="true">Send</span>
+            </button>
+			<button class="btn btn-danger btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="modal fade" id="checkDataModal" tabindex="-1" role="dialog" aria-labelledby="checkData" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Check Data</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <input type="hidden" id="sender_id" value=""/>
+          	<table class="table table-bordered table-striped table-condensed table-hover" id="checkDataTable">
+      	<thead>
+      		<tr>
+      			<th class="hcenter">From</th>
+      			<th class="hcenter">Accepted</th>
+      			<th class="hcenter">RequestKey</th>
+      			<th class="hcenter">See Data</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+			      	
+      	</tbody>
+      </table>
+          </div>
+          <div class="modal-footer">
+			<button class="btn btn-danger btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="modal fade" id="checkRequestedModal" tabindex="-1" role="dialog" aria-labelledby="checkRequestedModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Requests</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <input type="hidden" id="sender_id" value=""/>
+          	<table class="table table-bordered table-striped table-condensed table-hover" id="checkRequestedTable">
+      	<thead>
+      		<tr>
+      			<th class="hcenter">From</th>
+      			<th class="hcenter">Accept</th>
+      			<th class="hcenter">Reject</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+			      	
+      	</tbody>
+      </table>
+          </div>
+          <div class="modal-footer">
+			<button class="btn btn-danger btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+  </div>
+  
+  <script type="text/javascript">
+  </script>
+  
+</body>
+
+</html>
